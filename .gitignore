@@ -1,0 +1,8 @@
+.env
+venv/
+bot.db
+__pycache__/
+uploads/
+bot.log
+*.pyc
+.pytest_cache/

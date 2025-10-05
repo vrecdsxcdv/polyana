@@ -1,0 +1,3151 @@
+2025-10-05 23:30:19,192 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:30:25,905 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:30:25,910 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:30:30,507 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:30:30,511 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:30:42,847 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:30:52,933 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:30:53,806 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:30:53,811 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:31:02,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:31:02,194 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:31:06,306 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:31:06,312 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:31:18,673 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:31:28,394 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:31:28,399 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:31:35,662 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:31:35,667 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:31:40,326 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:31:40,330 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:31:52,664 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:32:02,747 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:32:03,014 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:32:03,019 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:32:09,183 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:32:09,188 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:32:12,548 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:32:12,554 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:32:16,487 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:32:16,492 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:32:30,027 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:32:37,677 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:32:37,682 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:32:44,137 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:32:44,142 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:32:48,379 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:32:48,384 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:33:00,715 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:33:10,799 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:33:12,232 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:33:12,237 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:33:17,782 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:33:17,787 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:33:23,859 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:33:23,860 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:33:36,201 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:33:46,315 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:33:46,812 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:33:46,817 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:33:49,256 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:33:49,757 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/sendMessage "HTTP/1.1 200 OK"
+2025-10-05 23:33:51,752 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:33:51,918 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/sendMessage "HTTP/1.1 200 OK"
+2025-10-05 23:33:52,056 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/sendMessage "HTTP/1.1 200 OK"
+2025-10-05 23:33:53,043 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:33:53,047 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:33:55,272 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:33:55,371 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/sendMessage "HTTP/1.1 200 OK"
+2025-10-05 23:33:57,729 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:33:57,731 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:34:02,653 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:34:02,656 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:34:09,574 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:34:09,580 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:34:18,375 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:34:18,379 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:34:26,266 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:34:26,270 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:34:37,141 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:34:37,146 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:34:55,162 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:34:57,100 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:34:57,104 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:35:00,812 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:35:00,816 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:35:05,287 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:35:05,288 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:35:13,186 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:35:13,191 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:35:22,462 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:35:22,465 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:35:33,554 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:35:33,556 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:35:47,125 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:35:47,127 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:36:06,259 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:36:06,261 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:36:27,443 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:36:27,444 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:36:57,242 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:36:57,250 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:37:30,763 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:37:30,767 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:38:05,686 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:38:05,690 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:38:39,227 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:38:39,229 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:39:12,510 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 200 OK"
+2025-10-05 23:39:13,047 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/sendMessage "HTTP/1.1 200 OK"
+2025-10-05 23:39:16,137 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:39:16,140 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:39:20,766 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:39:20,771 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:39:25,877 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:39:25,881 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:39:31,154 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:39:31,157 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:39:37,679 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:39:37,684 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:39:48,829 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:39:48,832 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:40:01,535 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:40:01,538 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:40:20,439 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:40:20,443 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:40:41,645 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:40:41,649 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:41:13,088 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:41:13,089 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:41:48,872 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:41:48,876 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:42:24,637 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:42:24,640 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:42:58,533 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:42:58,537 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:43:34,291 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:43:34,293 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:44:08,194 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:44:08,195 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:44:42,121 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:44:42,122 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:45:18,264 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:45:18,267 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-10-05 23:45:54,403 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8201237155:AAHR9aRTjeyrU5SPDwZW-g26UqXouGFi3lE/getUpdates "HTTP/1.1 409 Conflict"
+2025-10-05 23:45:54,407 - handlers.common - ERROR - Unhandled error: Traceback (most recent call last):
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 753, in _network_loop_retry
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 747, in do_action
+    return action_cb_task.result()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 377, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 649, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 4366, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 623, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 355, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/_bot.py", line 652, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 201, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/matvey/Desktop/Новая папка 7/printshop_bot/venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 384, in _request_wrapper
+    raise Conflict(message)
+telegram.error.Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+

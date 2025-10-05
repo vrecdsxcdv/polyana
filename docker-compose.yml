@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  bot:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./uploads:/app/uploads
+      - ./bot.db:/app/bot.db
+    restart: unless-stopped
