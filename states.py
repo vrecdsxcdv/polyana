@@ -1,36 +1,24 @@
-"""
-Состояния FSM для диалога заказа.
-"""
+from enum import IntEnum
 
-from enum import Enum
-
-
-class OrderStates(str, Enum):
-    """Состояния диалога заказа."""
-    
-    # Упрощенный поток
-    PRODUCT = "product"
-    BC_QTY = "bc_qty"
-    BC_SIZE = "bc_size"
-    BC_SIDES = "bc_sides"
-    FLY_FORMAT = "fly_format"
-    FLY_SIDES = "fly_sides"
-    
-    # Новые состояния для форматов и постобработки
-    ORDER_SHEET_FORMAT = "order_sheet_format"
-    ORDER_CUSTOM_SIZE = "order_custom_size"
-    ORDER_POSTPRESS = "order_postpress"
-    ORDER_POSTPRESS_BIGOVKA = "order_postpress_bigovka"
-    ORDER_BANNER_SIZE = "order_banner_size"
-    ORDER_MATERIAL = "order_material"
-    ORDER_PRINT_COLOR = "order_print_color"
-    PRINT_FORMAT = "print_format"
-    PRINT_TYPE = "print_type"
-    POSTPRESS = "postpress"
-    CANCEL_CHOICE = "cancel_choice"
-    
-    ORDER_UPLOAD = "order_upload"
-    ORDER_DUE = "order_due"
-    ORDER_PHONE = "order_phone"
-    ORDER_NOTES = "order_notes"
-    ORDER_CONFIRM = "order_confirm"
+class OrderStates(IntEnum):
+    PRODUCT = 10
+    BC_QTY = 20
+    BC_SIZE = 30
+    BC_SIDES = 40
+    FLY_FORMAT = 50
+    FLY_SIDES = 60
+    ORDER_SHEET_FORMAT = 70
+    ORDER_CUSTOM_SIZE = 80
+    ORDER_POSTPRESS = 90
+    ORDER_POSTPRESS_BIGOVKA = 100
+    ORDER_BANNER_SIZE = 110
+    ORDER_MATERIAL = 120
+    ORDER_PRINT_COLOR = 130
+    ORDER_UPLOAD = 140
+    ORDER_DUE = 150
+    ORDER_PHONE = 160
+    ORDER_NOTES = 170
+    ORDER_CONFIRM = 180
+    PRINT_FORMAT = 190
+    PRINT_TYPE = 200
+    CANCEL_CHOICE = 210
