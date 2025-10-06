@@ -104,8 +104,14 @@ async def handle_product(update:Update, context:ContextTypes.DEFAULT_TYPE):
 
     if is_btn(text,"баннеры"):
         context.user_data.update(what_to_print="Баннеры", product_type="banner")
-        push_state(context, OrderStates.ORDER_BANNER_SIZE)
-        return await render_state(update, context, OrderStates.ORDER_BANNER_SIZE)
+        from texts import CONTACTS_MESSAGE, BANNERS_REDIRECT
+        await update.message.reply_text(BANNERS_REDIRECT.format(contacts=CONTACTS_MESSAGE), reply_markup=get_home_keyboard())
+        try:
+            await send_order_to_operators(context.bot, "Клиент выбрал баннеры. Нужна помощь оператора.", int(config.OPERATOR_CHAT_ID))
+        except Exception:
+            pass
+        context.user_data.clear()
+        return ConversationHandler.END
 
     if is_btn(text,"плакаты"):
         context.user_data.update(what_to_print="Плакаты", product_type="poster")
