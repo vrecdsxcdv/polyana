@@ -1,5 +1,6 @@
 # keyboards.py
 from telegram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
+import os
 
 BTN_BACK   = "⬅️ Назад"
 BTN_NEXT   = "➡️ Далее"
@@ -225,3 +226,27 @@ def make_orders_inline_kb(orders):
     if row:
         buttons.append(row)
     return InlineKeyboardMarkup(buttons) if buttons else None
+
+# Функции для кнопок контактов
+def contact_operator_kb() -> InlineKeyboardMarkup:
+    """Инлайн-кнопки для контактов оператора"""
+    operator_handle = os.getenv("OPERATOR_HANDLE", "@polyanaprint")
+    operator_phone = os.getenv("OPERATOR_PHONE", "+7 963 163-92-62")
+    
+    # Убираем @ из handle для URL
+    handle_clean = operator_handle.lstrip("@")
+    # Убираем пробелы и + из телефона для tel: ссылки
+    phone_clean = operator_phone.replace(" ", "").replace("+", "")
+    
+    return InlineKeyboardMarkup([
+        [
+            InlineKeyboardButton("Открыть чат в TG", url=f"https://t.me/{handle_clean}"),
+            InlineKeyboardButton("Позвонить", url=f"tel:{phone_clean}"),
+        ],
+    ])
+
+def add_contact_row(rows: list) -> list:
+    """Добавить нижний ряд с кнопкой '📞 Связаться с оператором' (callback)."""
+    rows = list(rows)
+    rows.append([InlineKeyboardButton("📞 Связаться с оператором", callback_data="contact_operator")])
+    return rows

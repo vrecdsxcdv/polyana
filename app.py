@@ -29,6 +29,7 @@ from handlers.order_flow import (
 from handlers.status import handle_status_callback
 from handlers.admin import all_orders, on_admin_callback
 from handlers.orders_view import cb_view_order
+from handlers.common_contacts import handle_contact_operator
 from keyboards import BTN_NEW_ORDER, BTN_MY_ORDERS, BTN_CALL_OPERATOR, BTN_HELP, NAV_BACK, NAV_CANCEL, BTN_BACK
 
 def setup_logging():
@@ -191,6 +192,8 @@ def create_application():
     app.add_handler(CallbackQueryHandler(handle_status_callback, pattern=r"^(take_order_|start_work_|complete_order_)"))
     # Глобальный просмотр заказа по коду из любого состояния
     app.add_handler(CallbackQueryHandler(cb_view_order, pattern=r"^order_view:"))
+    # Обработчик контактов оператора
+    app.add_handler(CallbackQueryHandler(handle_contact_operator, pattern="^contact_operator$"))
     # Прочие коллбэки админки не регистрируем здесь (тихий список без кнопок)
     app.add_error_handler(error_handler)
     

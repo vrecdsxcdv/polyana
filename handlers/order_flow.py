@@ -430,18 +430,24 @@ async def handle_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     # Индивидуальный заказ
     if text == BTN_CUSTOM:
+        from keyboards import add_contact_row, InlineKeyboardMarkup
+        from texts import CONTACTS_TEXT
+        
+        # Создаем инлайн-клавиатуру с кнопкой контактов
+        rows = []
+        rows = add_contact_row(rows)
+        keyboard = InlineKeyboardMarkup(rows)
+        
         await say(
             update,
             (
                 "🛠️ *Индивидуальный заказ*\n\n"
                 "Хотите что-то особенное — нестандартный формат, материал или "
                 "индивидуальный дизайн? Мы с радостью подготовим для вас персональное предложение 🙌\n\n"
-                "Свяжитесь с нашим оператором:\n"
-                "📞 Телефон: +7 (999) 123-45-67\n"
-                "📨 Telegram: [@operator](https://t.me/operator)\n\n"
+                f"{CONTACTS_TEXT}\n\n"
                 "Он уточнит детали и поможет оформить заказ."
             ),
-            reply_markup=main_menu_keyboard(),
+            reply_markup=keyboard,
             parse_mode="Markdown",
         )
         return ConversationHandler.END
@@ -472,11 +478,20 @@ async def handle_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     # Баннеры - редирект к оператору
     elif text == CAT_BANNERS:
+        from keyboards import add_contact_row, InlineKeyboardMarkup
+        from texts import CONTACTS_TEXT
+        
+        # Создаем инлайн-клавиатуру с кнопкой контактов
+        rows = []
+        rows = add_contact_row(rows)
+        keyboard = InlineKeyboardMarkup(rows)
+        
         # инфо-карточка → назад в категории
         await say(update,
             "🖼️ Баннеры сейчас оформляются через оператора.\n"
             "Напишите, пожалуйста, — мы быстро всё уточним и оформим.\n\n"
-            "📞 Контакты:\nTelegram: @operator\nТелефон: +7 (XXX) XXX-XX-XX",
+            f"{CONTACTS_TEXT}",
+            reply_markup=keyboard,
             state_for_dedupe=OrderStates.CHOOSE_CATEGORY, context=context
         )
         return await goto(update, context, OrderStates.CHOOSE_CATEGORY, render_choose_category)
@@ -869,18 +884,23 @@ async def handle_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
             user = update.effective_user
             order = create_order(context.user_data, user.id)
             
-            # Отправляем в операторский чат
-            if config.config.OPERATOR_CHAT_ID:
-                try:
-                    await send_order_to_operators(
-                        context.bot,
-                        order,
-                        user,
-                        config.config.OPERATOR_CHAT_ID,
-                        order.code
-                    )
-                except Exception as e:
-                    logger.exception("Error sending order to operators: %s", e)
+            # Уведомляем операторов, но не роняем сценарий, если чаты не найдены
+            try:
+                results = await send_order_to_operators(
+                    context.bot,
+                    order,
+                    user,
+                    config.config.OPERATOR_CHAT_ID,
+                    order.code
+                )
+                # для дебага можно коротко логнуть сводку
+                ok = sum(1 for _, s, _ in results if s)
+                fail = sum(1 for _, s, _ in results if not s)
+                logger.info(f"Operator notify summary: ok={ok} fail={fail}")
+            except Exception as e:
+                # На всякий случай — жесткая изоляция ошибок
+                logger.exception(f"Operator notify crashed: {e}")
+                # не сообщаем пользователю про "тех. ошибку"
             
             # Уведомляем клиента финальным сообщением
             from keyboards import get_main_menu_keyboard

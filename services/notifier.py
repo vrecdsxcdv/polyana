@@ -1,5 +1,37 @@
+import os
+from typing import Iterable, List, Tuple
+from loguru import logger
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.error import TelegramError, BadRequest
 from services.formatting import format_order_summary
+
+def _parse_operator_ids() -> List[int]:
+    """
+    Собирает список ID из OPERATOR_IDS (через запятую) и OPERATOR_CHAT_ID (одиночный).
+    Игнорирует пустые/мусорные значения. Возвращает уникальные int.
+    """
+    raw = []
+    ids_env = os.getenv("OPERATOR_IDS", "")
+    if ids_env:
+        raw += [x.strip() for x in ids_env.split(",")]
+    single = os.getenv("OPERATOR_CHAT_ID", "")
+    if single:
+        raw.append(single.strip())
+
+    result = []
+    for x in raw:
+        if not x:
+            continue
+        try:
+            result.append(int(x))
+        except ValueError:
+            logger.warning(f"Skip invalid OPERATOR id: {x!r}")
+    # уникальные, порядок сохраняем
+    uniq = []
+    for x in result:
+        if x not in uniq:
+            uniq.append(x)
+    return uniq
 
 async def send_order_to_operators(bot, order, user, operator_chat_id, code):
     """Отправляет заказ в операторскую группу с кнопками статусов"""
@@ -24,10 +56,10 @@ async def send_order_to_operators(bot, order, user, operator_chat_id, code):
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
-    # Отправляем сообщение
-    message = await bot.send_message(
-        chat_id=operator_chat_id, 
-        text=text, 
+    # Используем новую функцию для отправки
+    results = await send_order_to_operators_universal(
+        bot=bot,
+        text=text,
         reply_markup=reply_markup,
         parse_mode='HTML'
     )
@@ -36,12 +68,42 @@ async def send_order_to_operators(bot, order, user, operator_chat_id, code):
     if hasattr(order, 'attachments') and order.attachments:
         for attachment in order.attachments:
             try:
-                await bot.send_document(
-                    chat_id=operator_chat_id,
-                    document=attachment.get('file_id'),
-                    caption="📎 Макет PDF"
-                )
+                # Отправляем файлы во все успешные чаты
+                for chat_id, success, _ in results:
+                    if success:
+                        try:
+                            await bot.send_document(
+                                chat_id=chat_id,
+                                document=attachment.get('file_id'),
+                                caption="📎 Макет PDF"
+                            )
+                        except Exception as e:
+                            logger.error(f"Error sending attachment to chat_id={chat_id}: {e}")
             except Exception as e:
-                print(f"Error sending attachment: {e}")
+                logger.error(f"Error processing attachment: {e}")
     
-    return message
+    return results
+
+async def send_order_to_operators_universal(bot, text: str, reply_markup=None, parse_mode=None) -> List[Tuple[int, bool, str]]:
+    """
+    Пытается отправить сообщение всем операторским чатам.
+    Возвращает список (chat_id, success, error_message).
+    Не выбрасывает исключения наружу.
+    """
+    results: List[Tuple[int, bool, str]] = []
+    chat_ids = _parse_operator_ids()
+    if not chat_ids:
+        logger.error("No OPERATOR_CHAT_ID / OPERATOR_IDS provided — skip notifying operators")
+        return []
+
+    for cid in chat_ids:
+        try:
+            await bot.send_message(chat_id=cid, text=text, reply_markup=reply_markup, parse_mode=parse_mode)
+            results.append((cid, True, ""))
+        except (BadRequest, TelegramError) as e:
+            logger.error(f"Error sending order to operators: chat_id={cid} err={e}")
+            results.append((cid, False, str(e)))
+        except Exception as e:
+            logger.exception(f"Unexpected error notifying operator chat_id={cid}: {e}")
+            results.append((cid, False, str(e)))
+    return results
