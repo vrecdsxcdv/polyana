@@ -6,35 +6,11 @@ from sqlalchemy.exc import NoResultFound
 from typing import List, Tuple
 from sqlalchemy import func
 from sqlalchemy import select
-from database import get_db, Base
-from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean
-from models import OrderDTO
+from db.session import SessionLocal
+from db.models import Order
+from schemas import OrderDTO
 
-class Order(Base):
-    __tablename__ = "orders"
-    
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    code = Column(String(20), unique=True, nullable=False)
-    user_id = Column(Integer, nullable=False)
-    what_to_print = Column(String(100), nullable=False)
-    quantity = Column(Integer, default=0)
-    format = Column(String(50), default="")
-    sides = Column(String(10), default="")
-    paper = Column(String(50), default="")
-    deadline_at = Column(DateTime, nullable=True)
-    contact = Column(String(50), default="")
-    notes = Column(Text, default="")
-    lamination = Column(String(20), default="none")
-    bigovka_count = Column(Integer, default=0)
-    corner_rounding = Column(Boolean, default=False)
-    sheet_format = Column(String(20), default="")
-    custom_size_mm = Column(String(50), default="")
-    material = Column(String(20), default="")
-    print_color = Column(String(10), default="color")
-    status = Column(String(20), default="NEW")
-    needs_operator = Column(Boolean, default=False)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+def get_db(): return SessionLocal()
 
 # Пользовательские статусы для отображения
 STATUS_MAP = {

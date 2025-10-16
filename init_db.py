@@ -5,8 +5,7 @@
 from __future__ import annotations
 
 import logging
-from database import create_tables, engine
-from models import Base
+from db.session import init_db
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -16,7 +15,7 @@ def init_database():
     """Инициализирует базу данных."""
     try:
         logger.info("Создание таблиц в базе данных...")
-        create_tables()
+        init_db()
         logger.info("✅ База данных успешно инициализирована!")
     except Exception as e:
         logger.error(f"❌ Ошибка при инициализации базы данных: {e}")

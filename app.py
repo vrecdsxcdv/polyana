@@ -33,7 +33,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ConversationHandler, CallbackQueryHandler, filters, Defaults
 from datetime import timezone
 from config import config
-from database import create_tables, safe_migrate, init_db
+from db.session import init_db
 from states import OrderStates
 from handlers.common import start_command, help_command, my_orders_command, status_command, call_operator_command, error_handler, main_menu_router, ping_command, whoami_command
 from handlers.order_flow import eff_msg

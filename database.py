@@ -47,7 +47,7 @@ def safe_migrate():
 def init_db():
     # импортируй модели перед create_all
     try:
-        from models import Order, User  # поправь пути под проект
+        from db.models import Order, User  # поправь пути под проект
         Base.metadata.create_all(bind=engine)
     except ImportError:
         # Fallback to safe_migrate if models import fails

@@ -1,39 +1,39 @@
+import html
+from loguru import logger
 from telegram import Update
 from telegram.ext import ContextTypes
-from services.orders import get_order_by_code, format_order_for_user
-from loguru import logger
-from database import SessionLocal
-from models import Order
-import html
+from db.session import SessionLocal
+from db.models import Order
 
 async def cb_view_order(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """
-    NEW: Показывает карточку заказа и статус по callback "order:view:<ID>".
-    Безопасность: показываем ТОЛЬКО если order.user_id == current_user.id
-    """
     query = update.callback_query
     await query.answer()
+    try:
+        _, _, order_id_str = query.data.split(":")
+        order_id = int(order_id_str)
+    except Exception:
+        await query.message.reply_text("Некорректный идентификатор заказа.")
+        return
 
-    order_id = int(query.data.split(":")[-1])
     session = SessionLocal()
     try:
         order = session.get(Order, order_id)
         if not order:
-            await query.message.reply_text("Заказ не найден. Возможно, он был удалён или ещё не создан на этом сервере.")
+            await query.message.reply_text("Заказ не найден. Возможно, он удалён или ещё не создан.")
             return
 
-        # Сформируй краткую карточку заказа
         text = (
             f"<b>Заказ №{order.id}</b>\n"
             f"Статус: {html.escape(order.status or 'в обработке')}\n"
-            f"Категория: {html.escape(order.category or '-')}\n"
-            f"Тираж: {order.qty or '-'}\n"
-            f"Комментарий: {html.escape(order.comment or '-')}\n"
+            f"Категория: {html.escape(order.what_to_print or '-')}\n"
+            f"Тираж: {order.quantity or '-'}\n"
+            f"Комментарий: {html.escape(order.notes or '-')}\n"
+            f"Создан: {order.created_at:%Y-%m-%d %H:%M}"
         )
-        await query.message.reply_text(text, parse_mode="HTML")
-    except Exception as e:
+        await query.message.reply_text(text, parse_mode="HTML", disable_web_page_preview=True)
+    except Exception:
         logger.exception("order:view failed")
-        await query.message.reply_text("Произошла техническая ошибка при открытии заказа. Попробуйте позже.")
+        await query.message.reply_text("Техническая ошибка при открытии заказа. Попробуйте позже.")
     finally:
         session.close()
 

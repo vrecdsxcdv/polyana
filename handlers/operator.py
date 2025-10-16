@@ -6,8 +6,8 @@ import logging
 from telegram import Update
 from telegram.ext import ContextTypes, CallbackQueryHandler
 
-from database import get_db
-from models import Order, OrderStatus
+from db.session import SessionLocal
+from db.models import Order
 from services.callbacks import parse_cb, OP_TAKE, OP_READY, OP_NEEDS_FIX, OP_CONTACT
 from texts import ORDER_TAKEN_BY_OPERATOR, ORDER_MARKED_READY, ORDER_NEEDS_FIX
 
@@ -22,7 +22,7 @@ async def operator_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not action or not order_id:
         return
 
-    db = get_db()
+    db = SessionLocal()
     try:
         order = db.query(Order).filter(Order.id == order_id).first()
         if not order:
@@ -35,7 +35,7 @@ async def operator_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         user_tg_id = order.user.tg_user_id if hasattr(order, 'user') else None
 
         if action == OP_TAKE:
-            order.status = OrderStatus.IN_PROGRESS
+            order.status = "IN_PROGRESS"
             order.needs_operator = False
             db.commit()
             # Редактирование сообщений отключено для безопасности
@@ -48,7 +48,7 @@ async def operator_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     logger.warning("Не удалось уведомить клиента о взятии в работу")
 
         elif action == OP_READY:
-            order.status = OrderStatus.READY
+            order.status = "READY"
             order.needs_operator = False
             db.commit()
             # Редактирование сообщений отключено для безопасности
@@ -61,7 +61,7 @@ async def operator_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     logger.warning("Не удалось уведомить клиента о готовности")
 
         elif action == OP_NEEDS_FIX:
-            order.status = OrderStatus.WAITING_CLIENT
+            order.status = "WAITING_CLIENT"
             order.needs_operator = True
             db.commit()
             # Редактирование сообщений отключено для безопасности

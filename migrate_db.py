@@ -5,7 +5,9 @@
 
 import logging
 from sqlalchemy import text
-from database import engine, get_db
+from db.session import engine, SessionLocal
+
+def get_db(): return SessionLocal()
 
 logger = logging.getLogger(__name__)
 
