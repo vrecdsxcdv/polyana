@@ -1,9 +1,11 @@
+import os
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy.pool import StaticPool
-from config import config
 
-engine = create_engine(config.DATABASE_URL, future=True, echo=False,
+# Support for SQLITE_URL environment variable for Railway
+DB_URL = os.getenv("SQLITE_URL") or "sqlite:////data/bot.db"  # Railway: /data — persist
+engine = create_engine(DB_URL, future=True, echo=False,
                        poolclass=StaticPool, connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
@@ -41,6 +43,15 @@ def safe_migrate():
         db.commit()
     finally:
         db.close()
+
+def init_db():
+    # импортируй модели перед create_all
+    try:
+        from models import Order, User  # поправь пути под проект
+        Base.metadata.create_all(bind=engine)
+    except ImportError:
+        # Fallback to safe_migrate if models import fails
+        safe_migrate()
 
 def create_tables():
     safe_migrate()

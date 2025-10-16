@@ -2,55 +2,40 @@ from telegram import Update
 from telegram.ext import ContextTypes
 from services.orders import get_order_by_code, format_order_for_user
 from loguru import logger
+from database import SessionLocal
+from models import Order
+import html
 
 async def cb_view_order(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """
-    NEW: Показывает карточку заказа и статус по callback "order_view:<CODE>".
+    NEW: Показывает карточку заказа и статус по callback "order:view:<ID>".
     Безопасность: показываем ТОЛЬКО если order.user_id == current_user.id
     """
-    q = update.callback_query
-    await q.answer()
+    query = update.callback_query
+    await query.answer()
+
+    order_id = int(query.data.split(":")[-1])
+    session = SessionLocal()
     try:
-        data = (q.data or "").strip()
-        if not data.startswith("order_view:"):
-            return
-        code = data.split(":", 1)[1].strip()
-        if not code:
-            return
-
-        # NEW: Надёжно получаем заказ из БД
-        session_factory = context.bot_data.get("db_session_factory")
-        session = session_factory() if session_factory else None
-        try:
-            if session is None:
-                # Фоллбек: используем существующий хелпер, если фабрика не задана
-                from services.orders import get_db
-                session = get_db()
-            order = get_order_by_code(session, code)
-        finally:
-            try:
-                if session is not None:
-                    session.close()
-            except Exception:
-                pass
-
+        order = session.get(Order, order_id)
         if not order:
-            # NEW: Понятное сообщение об отсутствии заказа
-            await q.message.reply_text("⚠️ Заказ не найден. Возможно, он был удалён или ещё не создан.")
+            await query.message.reply_text("Заказ не найден. Возможно, он был удалён или ещё не создан на этом сервере.")
             return
 
-        if order.user_id != update.effective_user.id:
-            await q.message.reply_text("⚠️ Недостаточно прав для просмотра этого заказа.")
-            return
-
-        # NEW: Отображаем карточку заказа
-        text = format_order_for_user(order)
-        await q.message.reply_text(text)
-        
+        # Сформируй краткую карточку заказа
+        text = (
+            f"<b>Заказ №{order.id}</b>\n"
+            f"Статус: {html.escape(order.status or 'в обработке')}\n"
+            f"Категория: {html.escape(order.category or '-')}\n"
+            f"Тираж: {order.qty or '-'}\n"
+            f"Комментарий: {html.escape(order.comment or '-')}\n"
+        )
+        await query.message.reply_text(text, parse_mode="HTML")
     except Exception as e:
-        # NEW: Логируем ошибку и показываем дружелюбное сообщение
-        logger.exception("Error in cb_view_order: %s", e)
-        await q.message.reply_text("⚠️ Произошла ошибка при открытии заказа. Попробуйте позже.")
+        logger.exception("order:view failed")
+        await query.message.reply_text("Произошла техническая ошибка при открытии заказа. Попробуйте позже.")
+    finally:
+        session.close()
 
 
 

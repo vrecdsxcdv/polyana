@@ -1,4 +1,5 @@
 import os
+import logging
 try:
     from dotenv import load_dotenv
     load_dotenv()
@@ -7,51 +8,34 @@ except Exception:
 
 from loguru import logger
 
-def get_env():
-    # read with fallbacks
-    token = (
-        os.getenv("TELEGRAM_BOT_TOKEN")
-        or os.getenv("BOT_TOKEN")
-        or os.getenv("TELEGRAM_TOKEN")
-    )
-    operator_chat_id = os.getenv("OPERATOR_CHAT_ID") or os.getenv("ADMIN_CHAT_ID")
-    admin_ids = os.getenv("ADMIN_IDS") or os.getenv("ADMINS")
-    tz = os.getenv("TIMEZONE") or "Europe/Moscow"
+# ENV and config handling with fallbacks
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("BOT_TOKEN")
+if not BOT_TOKEN or not BOT_TOKEN.strip():
+    raise RuntimeError("TELEGRAM_BOT_TOKEN/BOT_TOKEN is empty. Set it in Railway → Variables")
 
-    # debug log: what we have (without printing secrets)
-    visible_env = sorted([k for k in os.environ.keys() if "TOKEN" not in k and "KEY" not in k])
-    logger.info(f"ENV keys present: {visible_env}")
-    logger.info(f"ENV check: TELEGRAM_BOT_TOKEN={'set' if os.getenv('TELEGRAM_BOT_TOKEN') else 'missing'}; "
-                f"OPERATOR_CHAT_ID={'set' if operator_chat_id else 'missing'}; "
-                f"ADMIN_IDS={'set' if admin_ids else 'missing'}; TIMEZONE={tz}")
+# Чат для операторов (supergroup id, например -1002900494397)
+OPERATOR_CHAT_ID = os.getenv("OPERATOR_CHAT_ID") or os.getenv("OPERATOR_IDS")
+if OPERATOR_CHAT_ID:
+    OPERATOR_CHAT_ID = OPERATOR_CHAT_ID.strip().split(",")[0]
+else:
+    logging.warning("OPERATOR_CHAT_ID/OPERATOR_IDS is not set — отправка в операторский чат будет пропущена")
 
-    if not token:
-        raise RuntimeError("TELEGRAM_BOT_TOKEN is empty. Set it in Railway → Service → Variables.")
+# Админы (через запятую)
+ADMIN_IDS = {i.strip() for i in (os.getenv("ADMIN_IDS") or "").split(",") if i.strip()}
 
-    return token, operator_chat_id, admin_ids, tz
-
-# Get environment variables with fallbacks and logging
-TOKEN, OPERATOR_CHAT_ID, ADMIN_IDS, TIMEZONE = get_env()
-
-# Normalize types for chat IDs and admin IDs
-try:
-    OPERATOR_CHAT_ID = int(OPERATOR_CHAT_ID) if OPERATOR_CHAT_ID else None
-except Exception:
-    logger.warning("OPERATOR_CHAT_ID is not an integer. Using raw value.")
-
-ADMIN_ID_SET = set()
-if ADMIN_IDS:
-    ADMIN_ID_SET = set(int(x.strip()) if x.strip().lstrip("-").isdigit() else x.strip()
-                       for x in ADMIN_IDS.split(",") if x.strip())
+# Log startup info
+logging.info("Bot token source: %s", "TELEGRAM_BOT_TOKEN" if os.getenv("TELEGRAM_BOT_TOKEN") else "BOT_TOKEN")
+logging.info("Operator chat: %s", OPERATOR_CHAT_ID or "not set")
+logging.info("Admins: %s", ", ".join(ADMIN_IDS) or "none")
 
 import logging, logging.handlers
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ConversationHandler, CallbackQueryHandler, filters, Defaults
 from datetime import timezone
 from config import config
-from database import create_tables, safe_migrate
+from database import create_tables, safe_migrate, init_db
 from states import OrderStates
-from handlers.common import start_command, help_command, my_orders_command, status_command, call_operator_command, error_handler, main_menu_router
+from handlers.common import start_command, help_command, my_orders_command, status_command, call_operator_command, error_handler, main_menu_router, ping_command, whoami_command
 from handlers.order_flow import eff_msg
 from handlers.order_flow import (
     start_order, handle_category, handle_quantity, handle_bc_qty, handle_office_format, handle_office_color,
@@ -74,9 +58,9 @@ def setup_logging():
 
 def create_application():
     defaults=Defaults(parse_mode="HTML")
-    app=ApplicationBuilder().token(TOKEN).defaults(defaults).get_updates_connection_pool_size(4)\
+    app=ApplicationBuilder().token(BOT_TOKEN).defaults(defaults).get_updates_connection_pool_size(4)\
         .read_timeout(10).connect_timeout(10).pool_timeout(5).build()
-    create_tables(); safe_migrate()
+    init_db()  # Initialize database tables
 
     conv = ConversationHandler(
         entry_points=[CommandHandler("neworder", start_order), MessageHandler(filters.Regex("^🧾 Новый заказ$"), start_order)],
@@ -224,12 +208,14 @@ def create_application():
     app.add_handler(CommandHandler("help", help_command))
     app.add_handler(CommandHandler("status", status_command))
     app.add_handler(CommandHandler("call_operator", call_operator_command))
+    app.add_handler(CommandHandler("ping", ping_command))
+    app.add_handler(CommandHandler("whoami", whoami_command))
     # Операторская команда: все активные заказы (работает только в операторском чате и для операторов)
     app.add_handler(CommandHandler("all_orders", all_orders))
     app.add_handler(CallbackQueryHandler(on_admin_callback, pattern=r"^(adm_page|adm_open):"))
     app.add_handler(CallbackQueryHandler(handle_status_callback, pattern=r"^(take_order_|start_work_|complete_order_)"))
     # Глобальный просмотр заказа по коду из любого состояния
-    app.add_handler(CallbackQueryHandler(cb_view_order, pattern=r"^order_view:"))
+    app.add_handler(CallbackQueryHandler(cb_view_order, pattern=r"^order:view:(\d+)$"))
     # Обработчик контактов оператора
     app.add_handler(CallbackQueryHandler(handle_contact_operator, pattern="^contact_operator$"))
     # Прочие коллбэки админки не регистрируем здесь (тихий список без кнопок)
@@ -252,7 +238,7 @@ async def build_application():
 
 def main():
     setup_logging()
-    if not TOKEN or ":" not in TOKEN:
+    if not BOT_TOKEN or ":" not in BOT_TOKEN:
         print("❌ BOT_TOKEN отсутствует или неверный."); return
     app=create_application()
     print("✅ Bot starting (polling)…")

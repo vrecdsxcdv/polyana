@@ -29,10 +29,18 @@ async def handle_contact_operator(update: Update, context: ContextTypes.DEFAULT_
         await q.edit_message_reply_markup(reply_markup=None)
         
         # NEW: Отправляем финальное сообщение с контактами
-        await q.message.reply_text(CONTACT_TEXT, reply_markup=operator_keyboard())
+        OP_HANDLE = "@polyanaprint"
+        OP_PHONE = "+7 963 163-92-62"
+        await q.message.reply_text(
+            f"Для индивидуального заказа свяжитесь с оператором:\n{OP_HANDLE}\n{OP_PHONE}\n\nНажмите, чтобы открыть чат: https://t.me/polyanaprint"
+        )
         
         # NEW: Завершаем ConversationHandler
         return ConversationHandler.END
     else:
         # Fallback для обычных сообщений
-        await update.effective_message.reply_text(CONTACT_TEXT, reply_markup=operator_keyboard())
+        OP_HANDLE = "@polyanaprint"
+        OP_PHONE = "+7 963 163-92-62"
+        await update.effective_message.reply_text(
+            f"Для индивидуального заказа свяжитесь с оператором:\n{OP_HANDLE}\n{OP_PHONE}\n\nНажмите, чтобы открыть чат: https://t.me/polyanaprint"
+        )

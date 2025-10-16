@@ -886,22 +886,33 @@ async def handle_confirm(update: Update, context: ContextTypes.DEFAULT_TYPE):
             order = create_order(context.user_data, user.id)
             
             # Уведомляем операторов, но не роняем сценарий, если чаты не найдены
-            try:
-                results = await send_order_to_operators(
-                    context.bot,
-                    order,
-                    user,
-                    config.config.OPERATOR_CHAT_ID,
-                    order.code
-                )
-                # для дебага можно коротко логнуть сводку
-                ok = sum(1 for _, s, _ in results if s)
-                fail = sum(1 for _, s, _ in results if not s)
-                logger.info(f"Operator notify summary: ok={ok} fail={fail}")
-            except Exception as e:
-                # На всякий случай — жесткая изоляция ошибок
-                logger.exception(f"Operator notify crashed: {e}")
-                # не сообщаем пользователю про "тех. ошибку"
+            from services.notifier import send_order_to_operators
+            from services.formatting import format_order_summary
+            
+            # Формируем текст для операторов
+            order_summary = format_order_summary(order.__dict__ if hasattr(order, '__dict__') else order)
+            user_info = f"👤 Клиент: {user.first_name or 'Пользователь'}"
+            if user.username:
+                user_info += f" (@{user.username})"
+            user_info += f" (ID: {user.id})"
+            
+            op_text = f"📦 Новый заказ\n\n{order_summary}\n\n{user_info}\n\n🔢 Код заказа: <code>{order.code}</code>"
+            
+            # Создаем кнопки для управления статусом заказа
+            from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+            keyboard = [
+                [
+                    InlineKeyboardButton("📦 Взять", callback_data=f"take_order_{order.code}"),
+                    InlineKeyboardButton("⚙️ В работе", callback_data=f"start_work_{order.code}"),
+                    InlineKeyboardButton("✅ Готово", callback_data=f"complete_order_{order.code}")
+                ]
+            ]
+            kb = InlineKeyboardMarkup(keyboard)
+            
+            op_msg = await send_order_to_operators(context.bot, op_text, reply_markup=kb, parse_mode="HTML")
+            if not op_msg:
+                # просто логируем и продолжаем диалог с пользователем
+                logger.warning("Operator notification failed; continue without it")
             
             # Уведомляем клиента финальным сообщением
             from keyboards import get_main_menu_keyboard

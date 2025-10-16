@@ -104,6 +104,29 @@ async def call_operator_command(update: Update, context: ContextTypes.DEFAULT_TY
         logger.exception("Error in call_operator_command: %s", e)
         await update.message.reply_text("⚠️ Техническая ошибка. Попробуйте ещё раз.", reply_markup=main_menu_keyboard())
 
+async def ping_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда /ping - диагностика доступности бота"""
+    chat_id = update.effective_chat.id
+    logger.info(f"Ping from chat_id: {chat_id}")
+    await update.message.reply_text("pong")
+
+async def whoami_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Команда /whoami - показывает информацию о пользователе для отладки"""
+    user = update.effective_user
+    chat = update.effective_chat
+    
+    info = (
+        f"👤 User ID: {user.id}\n"
+        f"📝 Username: @{user.username or 'не указан'}\n"
+        f"📛 First name: {user.first_name or 'не указан'}\n"
+        f"📛 Last name: {user.last_name or 'не указан'}\n"
+        f"💬 Chat ID: {chat.id}\n"
+        f"💬 Chat type: {chat.type}"
+    )
+    
+    logger.info(f"Whoami: user_id={user.id}, username={user.username}, chat_id={chat.id}")
+    await update.message.reply_text(info)
+
 async def error_handler(update:Update, context:ContextTypes.DEFAULT_TYPE):
     logger.exception("Unhandled: %s", context.error)
     try:

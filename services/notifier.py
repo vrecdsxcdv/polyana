@@ -2,7 +2,7 @@ import os
 from typing import Iterable, List, Tuple
 from loguru import logger
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.error import TelegramError, BadRequest
+from telegram.error import TelegramError, BadRequest, Forbidden
 from services.formatting import format_order_summary
 
 def _parse_operator_ids() -> List[int]:
@@ -83,6 +83,27 @@ async def send_order_to_operators(bot, order, user, operator_chat_id, code):
                 logger.error(f"Error processing attachment: {e}")
     
     return results
+
+async def send_order_to_operators(bot, text, reply_markup=None, parse_mode=None):
+    """Resilient function to send order to operators chat"""
+    # Import OPERATOR_CHAT_ID from app.py
+    from app import OPERATOR_CHAT_ID
+    
+    if not OPERATOR_CHAT_ID:
+        logger.warning("OPERATOR_CHAT_ID not set — skipping send to operators")
+        return None
+    try:
+        msg = await bot.send_message(
+            chat_id=int(OPERATOR_CHAT_ID),
+            text=text,
+            reply_markup=reply_markup,
+            parse_mode=parse_mode,
+            disable_web_page_preview=True,
+        )
+        return msg
+    except (BadRequest, Forbidden) as e:
+        logger.error(f"Failed to send to operators chat {OPERATOR_CHAT_ID}: {e}")
+        return None
 
 async def send_order_to_operators_universal(bot, text: str, reply_markup=None, parse_mode=None) -> List[Tuple[int, bool, str]]:
     """
