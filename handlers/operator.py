@@ -26,7 +26,9 @@ async def operator_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         order = db.query(Order).filter(Order.id == order_id).first()
         if not order:
-            await query.edit_message_text("Заказ не найден.")
+            # Редактирование сообщений отключено для безопасности
+            # await query.edit_message_text("Заказ не найден.")
+            await context.bot.send_message(chat_id=query.message.chat_id, text="Заказ не найден.")
             return
 
         # клиент tg id
@@ -36,7 +38,9 @@ async def operator_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             order.status = OrderStatus.IN_PROGRESS
             order.needs_operator = False
             db.commit()
-            await query.edit_message_text(f"🛠 Заказ #{order.code} взят в работу.")
+            # Редактирование сообщений отключено для безопасности
+            # await query.edit_message_text(f"🛠 Заказ #{order.code} взят в работу.")
+            await context.bot.send_message(chat_id=query.message.chat_id, text=f"🛠 Заказ #{order.code} взят в работу.")
             if user_tg_id:
                 try:
                     await context.bot.send_message(chat_id=user_tg_id, text=ORDER_TAKEN_BY_OPERATOR)
@@ -47,7 +51,9 @@ async def operator_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             order.status = OrderStatus.READY
             order.needs_operator = False
             db.commit()
-            await query.edit_message_text(f"✅ Заказ #{order.code} отмечен как готовый.")
+            # Редактирование сообщений отключено для безопасности
+            # await query.edit_message_text(f"✅ Заказ #{order.code} отмечен как готовый.")
+            await context.bot.send_message(chat_id=query.message.chat_id, text=f"✅ Заказ #{order.code} отмечен как готовый.")
             if user_tg_id:
                 try:
                     await context.bot.send_message(chat_id=user_tg_id, text=ORDER_MARKED_READY)
@@ -58,7 +64,9 @@ async def operator_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             order.status = OrderStatus.WAITING_CLIENT
             order.needs_operator = True
             db.commit()
-            await query.edit_message_text(f"✏️ По заказу #{order.code} запрошены правки.")
+            # Редактирование сообщений отключено для безопасности
+            # await query.edit_message_text(f"✏️ По заказу #{order.code} запрошены правки.")
+            await context.bot.send_message(chat_id=query.message.chat_id, text=f"✏️ По заказу #{order.code} запрошены правки.")
             if user_tg_id:
                 try:
                     await context.bot.send_message(chat_id=user_tg_id, text=ORDER_NEEDS_FIX)

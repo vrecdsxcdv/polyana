@@ -1,80 +1,227 @@
-from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
+# keyboards.py
+from telegram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 
 BTN_BACK   = "⬅️ Назад"
-BTN_CANCEL = "❌ Отмена"
 BTN_NEXT   = "➡️ Далее"
 BTN_SKIP   = "⏭️ Пропустить"
-BTN_SUBMIT = "Готово"
-BTN_BC_SIZE = "Визитка 90×50"
-BTN_1 = "Односторонняя"
-BTN_2 = "Двусторонняя"
+BTN_CANCEL = "❌ Отмена"
+BTN_CANCEL_ORDER = "🛑 Отменить заказ"
 
-def get_keyboard_remove(): return ReplyKeyboardRemove()
+# Константы для fallbacks
+NAV_BACK = "↩️ Назад"
+NAV_CANCEL = "❌ Отмена"
 
-def get_home_keyboard():
+BTN_NEW_ORDER = "🧾 Новый заказ"
+BTN_MY_ORDERS = "📦 Мои заказы"
+BTN_CALL_OPERATOR = "🧑‍💼 Связаться с оператором"
+BTN_HELP = "🆘 Помощь"
+
+# Тексты категорий
+CAT_BC       = "🪪 Визитки"
+CAT_POSTERS  = "🖼 Плакаты"
+CAT_FLYERS   = "📄 Флаеры"
+CAT_STICKERS = "🏷️ Наклейки"
+CAT_BANNERS  = "🖨 Баннеры"
+CAT_OFFICE   = "🗂 Печать на офисной"
+BTN_CUSTOM   = "🛠️ Индивидуальный заказ"
+
+def bottom_row():
+    return [BTN_BACK, BTN_CANCEL]
+
+def get_main_menu_keyboard():
+    # Этаж 1 — Новый заказ (во всю ширину)
+    # Этаж 2 — пополам Мои заказы / Связаться с оператором
+    # Этаж 3 — Помощь (во всю ширину)
     return ReplyKeyboardMarkup(
-        [["📝 Новый заказ"], ["📦 Мои заказы","☎️ Связаться с оператором"], ["❓ Помощь"]],
-        resize_keyboard=True, is_persistent=True)
+        [
+            [BTN_NEW_ORDER],
+            [BTN_MY_ORDERS, BTN_CALL_OPERATOR],
+            [BTN_HELP],
+        ],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
 
-def get_product_keyboard():
-    return ReplyKeyboardMarkup([
-        ["🪪 Визитки","📄 Флаеры"],
-        ["🖼 Баннеры","📰 Плакаты"],
-        ["🏷 Наклейки","📚 Листы"],
-        ["📦 Другое"],
-        [BTN_BACK, BTN_CANCEL]
-    ], resize_keyboard=True, is_persistent=True)
+def get_categories_keyboard():
+    """
+    Клавиатура выбора категории ('Что будем печатать?')
+    Без кнопки 'Отмена', с кнопкой '⬅️ Назад', которая ведет в главное меню.
+    """
+    rows = [
+        [CAT_BC, CAT_POSTERS],
+        [CAT_FLYERS, CAT_STICKERS],
+        [CAT_BANNERS, CAT_OFFICE],
+        [BTN_CUSTOM],
+        [BTN_BACK],
+    ]
+    return ReplyKeyboardMarkup(rows, resize_keyboard=True, is_persistent=True)
 
-def get_bc_qty_keyboard():
-    return ReplyKeyboardMarkup([["50","100"],["500","1000"],[BTN_BACK, BTN_CANCEL]],
-                               resize_keyboard=True, is_persistent=True)
-
-def get_bc_size_keyboard():
-    return ReplyKeyboardMarkup([[BTN_BC_SIZE],[BTN_BACK, BTN_CANCEL]],
-                               resize_keyboard=True, is_persistent=True)
-
-def get_sides_keyboard():
-    return ReplyKeyboardMarkup([[BTN_1, BTN_2],[BTN_BACK, BTN_CANCEL]],
-                               resize_keyboard=True, is_persistent=True)
-
-def get_format_selection_keyboard():
-    return ReplyKeyboardMarkup([
-        ["A7 (105×74 мм)","A6 (148×105 мм)"],
-        ["A5 (210×148 мм)","A4 (297×210 мм)"],
-        ["A3 (420×297 мм)","A2 (594×420 мм)"],
-        ["A1 (841×594 мм)","Ваш размер"],
-        [BTN_BACK, BTN_CANCEL]
-    ], resize_keyboard=True, is_persistent=True)
-
-def get_material_keyboard():
-    return ReplyKeyboardMarkup([["📄 Бумага","🎯 Винил"],[BTN_BACK, BTN_CANCEL]],
-                               resize_keyboard=True, is_persistent=True)
-
-def get_print_color_keyboard():
-    return ReplyKeyboardMarkup([["🎨 Цветная","⚫ Ч/Б"],[BTN_BACK, BTN_CANCEL]],
-                               resize_keyboard=True, is_persistent=True)
-
-def get_postpress_keyboard(lamination="none", bigo=0, cr=False):
-    lam = {"none":"✨ Ламинация (нет)","matte":"✨ Ламинация (мат)","glossy":"✨ Ламинация (глянец)"}[lamination]
-    return ReplyKeyboardMarkup([
-        [lam],
-        [f"➖ Биговка ({bigo} линий)" if bigo else "➖ Биговка", f"🔘 Скругление углов ({'да' if cr else 'нет'})"],
-        ["➡️ Далее","⬅️ Назад"],
-        ["❌ Отмена"]
-    ], resize_keyboard=True, is_persistent=True)
-
-def get_upload_keyboard():
-    return ReplyKeyboardMarkup([[BTN_NEXT],[BTN_BACK, BTN_CANCEL]],
-                               resize_keyboard=True, is_persistent=True)
-
-def get_notes_keyboard():
-    return ReplyKeyboardMarkup([[BTN_SKIP],[BTN_BACK, BTN_CANCEL]],
-                               resize_keyboard=True, is_persistent=True)
-
-def get_confirm_keyboard():
-    return ReplyKeyboardMarkup([[BTN_SUBMIT],[BTN_BACK, BTN_CANCEL]],
-                               resize_keyboard=True, is_persistent=True)
+# Алиас для совместимости
+get_category_keyboard = get_categories_keyboard
 
 def get_cancel_choice_keyboard():
-    return ReplyKeyboardMarkup([["↩️ Только этот шаг"],["🗑 Полностью отменить заказ"],[BTN_BACK]],
-                               resize_keyboard=True, is_persistent=True)
+    return ReplyKeyboardMarkup(
+        [["↩️ Отменить этот шаг", "🗑️ Отменить весь заказ"],
+         [BTN_BACK]],
+        resize_keyboard=True, is_persistent=True
+    )
+
+# Хелпер: нижняя навигация для шагов (Назад/Отмена + опционально Далее/Пропустить)
+def nav_keyboard(show_next=False, show_skip=False):
+    row = [BTN_BACK, BTN_CANCEL]
+    rows = [row]
+    if show_next or show_skip:
+        extra = []
+        if show_next: extra.append(BTN_NEXT)
+        if show_skip: extra.append(BTN_SKIP)
+        rows.append(extra)
+    return ReplyKeyboardMarkup(rows, resize_keyboard=True, is_persistent=True)
+
+# Алиас на случай старого кода (будет определен после get_bc_sides_keyboard)
+
+# Офисная бумага
+def get_office_format_keyboard():
+    return ReplyKeyboardMarkup(
+        [["A4", "A3"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_office_color_keyboard():
+    return ReplyKeyboardMarkup(
+        [["⚫ Ч/Б", "🌈 Цветная"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+# Плакаты
+def get_poster_format_keyboard():
+    return ReplyKeyboardMarkup(
+        [["A2", "A1", "A0"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_simple_lamination_keyboard():
+    return ReplyKeyboardMarkup(
+        [["Ламинация: Да", "Ламинация: Нет"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+# Визитки
+def get_bc_format_keyboard():
+    return ReplyKeyboardMarkup(
+        [["90×50 мм"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_bc_sides_keyboard():
+    return ReplyKeyboardMarkup(
+        [["Односторонние", "Двусторонние"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_bc_lamination_keyboard():
+    return ReplyKeyboardMarkup(
+        [["✨ Матовая", "✨ Глянец", "❌ Нет"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+# Флаеры
+def get_fly_format_keyboard():
+    return ReplyKeyboardMarkup(
+        [["A7", "A6"], ["A5", "A4"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_fly_sides_keyboard():
+    return ReplyKeyboardMarkup(
+        [["Односторонние", "Двусторонние"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+# Наклейки
+def get_sticker_material_keyboard():
+    return ReplyKeyboardMarkup(
+        [["Бумага", "Пленка"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_sticker_color_keyboard():
+    return ReplyKeyboardMarkup(
+        [["⚫ Ч/Б", "🌈 Цветная"], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+# Общие клавиатуры
+def get_files_keyboard():
+    return ReplyKeyboardMarkup(
+        [[BTN_NEXT], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_due_keyboard():
+    return ReplyKeyboardMarkup(
+        [[BTN_SKIP], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_phone_keyboard():
+    return ReplyKeyboardMarkup(
+        [bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_notes_keyboard():
+    return ReplyKeyboardMarkup(
+        [[BTN_SKIP], bottom_row()],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+def get_confirm_keyboard():
+    return ReplyKeyboardMarkup(
+        [["✅ Подтвердить", "✏️ Изменить"], [BTN_CANCEL]],
+        resize_keyboard=True,
+        is_persistent=True,
+    )
+
+# Алиас на случай старого кода
+get_fly_sides_keyboard = get_bc_sides_keyboard
+
+def smart_cancel_inline():
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("↩️ Отменить этот шаг", callback_data="cancel_step")],
+        [InlineKeyboardButton("✖️ Отменить заказ",   callback_data="cancel_all")],
+    ])
+
+# Inline клавиатура для списка заказов (2-3 в ряд)
+def make_orders_inline_kb(orders):
+    """
+    Генерит InlineKeyboardMarkup со списком заказов.
+    Кнопка = номер заказа, callback_data = "order_view:<CODE>"
+    """
+    buttons = []
+    row = []
+    for i, o in enumerate(orders, start=1):
+        code = getattr(o, "code", None)
+        if not code:
+            continue
+        row.append(InlineKeyboardButton(text=f"#{code}", callback_data=f"order_view:{code}"))
+        if len(row) == 3:
+            buttons.append(row)
+            row = []
+    if row:
+        buttons.append(row)
+    return InlineKeyboardMarkup(buttons) if buttons else None

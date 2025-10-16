@@ -1,8 +1,10 @@
-.env
 venv/
-bot.db
+.venv/
 __pycache__/
-uploads/
-bot.log
 *.pyc
-.pytest_cache/
+.env
+*.log
+logs/
+*.sqlite3
+*.db
+.DS_Store

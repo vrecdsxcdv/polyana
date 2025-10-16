@@ -1,0 +1,211 @@
+=== SUMMARY ===
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:7283232947] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:2405092211] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:4743896505] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:4209641202] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:8983458231] cat='🗂 Печать на офисной' success=False time=7.49s avg_lat=0.39s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7613658221] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:1499748035] cat='📄 Флаеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:9458763841] cat='🖨 Баннеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7528681409] cat='📄 Флаеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:1550771423] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:8987798260] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7635956350] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:6208675026] cat='🗂 Печать на офисной' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7566320265] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:9045395432] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:4728742260] cat='🏷️ Наклейки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:2416169895] cat='🖨 Баннеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:9181263734] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:9882418883] cat='🛠️ Индивидуальный заказ' success=False time=7.50s avg_lat=0.39s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7017862116] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:4534145868] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:9870637243] cat='📄 Флаеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:3232035252] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:8839939448] cat='🗂 Печать на офисной' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:6181881569] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:160505859] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:266863446] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:8641181256] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:7377916121] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:5008942175] cat='📄 Флаеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:1184534858] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:9373362005] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:7800351170] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:9650064730] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:8941923265] cat='🪪 Визитки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:4902629600] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:6810238124] cat='🗂 Печать на офисной' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:5734503919] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:5149696452] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:5776929591] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8191651418] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:2417650279] cat='🖼 Плакаты' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:1987261234] cat='🪪 Визитки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:9440827198] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:5345486593] cat='🏷️ Наклейки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8675178661] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:2523251692] cat='🖨 Баннеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:364903379] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:6528123991] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8055908322] cat='🛠️ Индивидуальный заказ' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8834337035] cat='🪪 Визитки' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8741331762] cat='🖨 Баннеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:1377696060] cat='🛠️ Индивидуальный заказ' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:1389666540] cat='🗂 Печать на офисной' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:3248708761] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:4264805105] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:9385501606] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:5650915317] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:8423471159] cat='🖼 Плакаты' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:7181042149] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:8569022907] cat='🖨 Баннеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:6228177622] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:5106631513] cat='📄 Флаеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:5446420938] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:7917940492] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:8667447737] cat='🖼 Плакаты' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:6378378573] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:9876934117] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:9132302746] cat='🖼 Плакаты' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:8563462480] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:4987527747] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:6350453053] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:9517684433] cat='🖨 Баннеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:1193607479] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:1551256966] cat='🏷️ Наклейки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:5752697182] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:1005128727] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:5062580215] cat='🪪 Визитки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:3131132132] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:6223363008] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:149591530] cat='🪪 Визитки' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:9201833457] cat='🛠️ Индивидуальный заказ' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:488144901] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:5246615752] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:7151717459] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:9517719257] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:3835106718] cat='🛠️ Индивидуальный заказ' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:3711383110] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:7595515622] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:6266466458] cat='🪪 Визитки' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:5273448217] cat='📄 Флаеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:7980321319] cat='🖼 Плакаты' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:2890185355] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:7311026767] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:5866333129] cat='🖼 Плакаты' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:5858569033] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:5906338440] cat='🖼 Плакаты' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:9306033083] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:3131781162] cat='🏷️ Наклейки' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:4544819270] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:155 - ✅ Успешных заказов: 0
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:156 - ⚠️ Ошибок: 100
+2025-10-15 22:38:53.459 | INFO     | __main__:main_async:128 - Starting load test: users=100, delay=0.5s
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:7283232947] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:2405092211] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:4743896505] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:4209641202] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.921 | INFO     | __main__:main_async:148 - [chat:8983458231] cat='🗂 Печать на офисной' success=False time=7.49s avg_lat=0.39s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7613658221] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:1499748035] cat='📄 Флаеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:9458763841] cat='🖨 Баннеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7528681409] cat='📄 Флаеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:1550771423] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:8987798260] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7635956350] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:6208675026] cat='🗂 Печать на офисной' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7566320265] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:9045395432] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:4728742260] cat='🏷️ Наклейки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:2416169895] cat='🖨 Баннеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:9181263734] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:9882418883] cat='🛠️ Индивидуальный заказ' success=False time=7.50s avg_lat=0.39s
+2025-10-15 22:39:01.922 | INFO     | __main__:main_async:148 - [chat:7017862116] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:4534145868] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:9870637243] cat='📄 Флаеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:3232035252] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:8839939448] cat='🗂 Печать на офисной' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:6181881569] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:160505859] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:266863446] cat='🛠️ Индивидуальный заказ' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:8641181256] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:7377916121] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:5008942175] cat='📄 Флаеры' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:1184534858] cat='🪪 Визитки' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:9373362005] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:7800351170] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:9650064730] cat='🖼 Плакаты' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.923 | INFO     | __main__:main_async:148 - [chat:8941923265] cat='🪪 Визитки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:4902629600] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:6810238124] cat='🗂 Печать на офисной' success=False time=8.09s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:5734503919] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:5149696452] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:5776929591] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8191651418] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:2417650279] cat='🖼 Плакаты' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:1987261234] cat='🪪 Визитки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:9440827198] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:5345486593] cat='🏷️ Наклейки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8675178661] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:2523251692] cat='🖨 Баннеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:364903379] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:6528123991] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8055908322] cat='🛠️ Индивидуальный заказ' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8834337035] cat='🪪 Визитки' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.924 | INFO     | __main__:main_async:148 - [chat:8741331762] cat='🖨 Баннеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:1377696060] cat='🛠️ Индивидуальный заказ' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:1389666540] cat='🗂 Печать на офисной' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:3248708761] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:4264805105] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:9385501606] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:5650915317] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:8423471159] cat='🖼 Плакаты' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:7181042149] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:8569022907] cat='🖨 Баннеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:6228177622] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:5106631513] cat='📄 Флаеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:5446420938] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:7917940492] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:8667447737] cat='🖼 Плакаты' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:6378378573] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.925 | INFO     | __main__:main_async:148 - [chat:9876934117] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:9132302746] cat='🖼 Плакаты' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:8563462480] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:4987527747] cat='🛠️ Индивидуальный заказ' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:6350453053] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:9517684433] cat='🖨 Баннеры' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:1193607479] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:1551256966] cat='🏷️ Наклейки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:5752697182] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:1005128727] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:5062580215] cat='🪪 Визитки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:3131132132] cat='🖨 Баннеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:6223363008] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:149591530] cat='🪪 Визитки' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:9201833457] cat='🛠️ Индивидуальный заказ' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:488144901] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:5246615752] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.926 | INFO     | __main__:main_async:148 - [chat:7151717459] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:9517719257] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:3835106718] cat='🛠️ Индивидуальный заказ' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:3711383110] cat='🪪 Визитки' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:7595515622] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:6266466458] cat='🪪 Визитки' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:5273448217] cat='📄 Флаеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:7980321319] cat='🖼 Плакаты' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:2890185355] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:7311026767] cat='🏷️ Наклейки' success=False time=8.08s avg_lat=0.45s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:5866333129] cat='🖼 Плакаты' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:5858569033] cat='🖼 Плакаты' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:5906338440] cat='🖼 Плакаты' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:9306033083] cat='🖨 Баннеры' success=False time=8.39s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:3131781162] cat='🏷️ Наклейки' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:148 - [chat:4544819270] cat='📄 Флаеры' success=False time=8.45s avg_lat=0.49s
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:155 - ✅ Успешных заказов: 0
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:156 - ⚠️ Ошибок: 100
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:157 - ⏱ Среднее время отклика: 0.47 сек
+2025-10-15 22:39:01.927 | INFO     | __main__:main_async:158 - ⏱ Среднее время сценария: 8.24 сек
+
+=== OPERATOR COMMAND CHECK ===
+ENV OPERATOR_IDS=12345

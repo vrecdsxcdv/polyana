@@ -2,7 +2,28 @@
 
 Production-готовый Telegram-бот для приема заказов на полиграфические услуги с полным циклом обработки от оформления до готовности.
 
+## Deploy to Railway (free)
+
+1. Sign in: https://railway.app (через GitHub)
+2. New Project → Deploy from GitHub → выбери `vrecdsxcdv/polyana`
+3. Railway сам увидит `requirements.txt` и `railway.toml`
+4. В Project → Variables добавь:
+   - `BOT_TOKEN` — токен бота (обязательно)
+   - `OPERATOR_IDS` — опционально, например `620662700`
+   - `DATABASE_URL` — по желанию (по умолчанию `sqlite:///bot.db`)
+5. Нажми **Deploy**. Через 1–2 минуты бот запустится (polling).
+6. Логи: Deployments → Logs.
+
 ## 🚀 Быстрый старт
+
+### Local run
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env  # и впиши свой BOT_TOKEN
+python app.py
+```
 
 ### Локальный запуск
 

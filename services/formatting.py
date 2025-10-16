@@ -21,3 +21,11 @@ def format_order_summary(ud: dict) -> str:
     if ud.get('contact'): lines.append("📞 Телефон: "+ud['contact'])
     if ud.get('notes'): lines.append("💬 Пожелания: "+ud['notes'])
     return "\n".join(lines)
+
+def brief_order_row(order) -> str:
+    """Короткая строка для списка заказов в админке."""
+    created = order.created_at.strftime("%d.%m %H:%M") if getattr(order, "created_at", None) else ""
+    product = getattr(order, "product_human", None) or getattr(order, "what_to_print", "")
+    customer = getattr(order, "customer_name", "") or f"id:{getattr(order, 'user_id', '-') }"
+    status = getattr(order, "status", "")
+    return f"• {order.code} — {product} · {status} · {created} · {customer}"

@@ -1,24 +1,44 @@
 from enum import IntEnum
 
 class OrderStates(IntEnum):
-    PRODUCT = 10
-    BC_QTY = 20
-    BC_SIZE = 30
-    BC_SIDES = 40
-    FLY_FORMAT = 50
-    FLY_SIDES = 60
-    ORDER_SHEET_FORMAT = 70
-    ORDER_CUSTOM_SIZE = 80
-    ORDER_POSTPRESS = 90
-    ORDER_POSTPRESS_BIGOVKA = 100
-    ORDER_BANNER_SIZE = 110
-    ORDER_MATERIAL = 120
-    ORDER_PRINT_COLOR = 130
-    ORDER_UPLOAD = 140
-    ORDER_DUE = 150
-    ORDER_PHONE = 160
-    ORDER_NOTES = 170
-    ORDER_CONFIRM = 180
-    PRINT_FORMAT = 190
-    PRINT_TYPE = 200
-    CANCEL_CHOICE = 210
+    # Общие состояния
+    START = 1
+    CHOOSE_CATEGORY = 10
+    QUANTITY = 20
+    
+    # Офисная бумага
+    OFFICE_FORMAT = 30        # A4 / A3
+    OFFICE_COLOR = 40         # Ч/Б / Цветная
+    
+    # Плакаты
+    POSTER_FORMAT = 50        # A2/A1/A0
+    ORDER_POSTPRESS = 60      # Ламинация Да/Нет
+    
+    # Визитки
+    BC_QTY = 70               # тираж визиток (кратно 50, min 50)
+    BC_FORMAT = 80            # Визитка 90×50 (единственный формат)
+    BC_SIDES = 90             # Односторонняя / Двусторонняя
+    BC_LAMINATION = 100       # Матовая / Глянец
+    
+    # Флаеры
+    FLY_FORMAT = 110          # A7/A6/A5/A4
+    FLY_SIDES = 120           # Односторонняя / Двусторонняя
+    
+    # Наклейки
+    STICKER_SIZE = 130        # ввод/кнопки размеров
+    STICKER_MATERIAL = 140    # Бумага/Пленка
+    STICKER_COLOR = 150       # Ч/Б / Цвет
+    
+    # Общие шаги
+    ORDER_FILES = 160         # загрузка PDF
+    ORDER_DUE = 170           # срок (dateparser)
+    PHONE = 180               # телефон
+    NOTES = 185               # дополнительные пожелания
+    CONFIRM = 190             # подтверждение
+    CANCEL_CONFIRM = 200      # подтверждение отмены (локальное состояние)
+
+# обратная совместимость, если в коде встречалось CATEGORY
+try:
+    OrderStates.CATEGORY
+except AttributeError:
+    OrderStates.CATEGORY = OrderStates.CHOOSE_CATEGORY
