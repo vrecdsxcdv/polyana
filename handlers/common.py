@@ -85,12 +85,20 @@ async def status_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await my_orders_command(update, context)
 
 async def call_operator_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Команда /call_operator - позвать оператора"""
+    """NEW: Команда /call_operator - позвать оператора с обновленным текстом"""
     try:
-        from texts import BANNERS_REDIRECT
+        from handlers.common_contacts import CONTACT_TEXT, operator_keyboard
+        
+        # NEW: Обновленный текст для связи с оператором
+        contact_text = (
+            "💬 Связаться с оператором\n\n"
+            "По любым вопросам вы можете написать напрямую оператору:\n"
+            "👩‍💻 @polyanaprint\n"
+            "📞 +7 963 163-92-62"
+        )
         await update.message.reply_text(
-            BANNERS_REDIRECT,
-            reply_markup=main_menu_keyboard()
+            contact_text,
+            reply_markup=operator_keyboard()
         )
     except Exception as e:
         logger.exception("Error in call_operator_command: %s", e)

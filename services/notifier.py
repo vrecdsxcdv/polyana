@@ -86,24 +86,32 @@ async def send_order_to_operators(bot, order, user, operator_chat_id, code):
 
 async def send_order_to_operators_universal(bot, text: str, reply_markup=None, parse_mode=None) -> List[Tuple[int, bool, str]]:
     """
-    Пытается отправить сообщение всем операторским чатам.
+    NEW: Пытается отправить сообщение операторскому чату.
     Возвращает список (chat_id, success, error_message).
     Не выбрасывает исключения наружу.
     """
     results: List[Tuple[int, bool, str]] = []
-    chat_ids = _parse_operator_ids()
-    if not chat_ids:
-        logger.error("No OPERATOR_CHAT_ID / OPERATOR_IDS provided — skip notifying operators")
+    
+    # NEW: Используем env_int helper для получения OPERATOR_CHAT_ID
+    from app import env_int
+    op_chat = env_int("OPERATOR_CHAT_ID")
+    if op_chat is None:
+        logger.warning("OPERATOR_CHAT_ID is not set; skip notifying operators")
         return []
 
-    for cid in chat_ids:
-        try:
-            await bot.send_message(chat_id=cid, text=text, reply_markup=reply_markup, parse_mode=parse_mode)
-            results.append((cid, True, ""))
-        except (BadRequest, TelegramError) as e:
-            logger.error(f"Error sending order to operators: chat_id={cid} err={e}")
-            results.append((cid, False, str(e)))
-        except Exception as e:
-            logger.exception(f"Unexpected error notifying operator chat_id={cid}: {e}")
-            results.append((cid, False, str(e)))
+    try:
+        await bot.send_message(
+            chat_id=op_chat,
+            text=text,
+            reply_markup=reply_markup,
+            parse_mode=parse_mode,
+            disable_web_page_preview=True,
+        )
+        results.append((op_chat, True, ""))
+    except (BadRequest, TelegramError) as e:
+        logger.error(f"Failed to send order to operators (chat {op_chat}): {e}")
+        results.append((op_chat, False, str(e)))
+    except Exception as e:
+        logger.exception(f"Unexpected error notifying operator chat_id={op_chat}: {e}")
+        results.append((op_chat, False, str(e)))
     return results

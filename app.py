@@ -5,9 +5,23 @@ try:
 except Exception:
     pass
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
+# NEW: env helpers
+from loguru import logger
+
+def env_int(name: str, default: int | None = None) -> int | None:
+    val = os.getenv(name)
+    if val is None:
+        return default
+    try:
+        return int(val)
+    except ValueError:
+        logger.error(f"ENV {name} must be integer, got: {val!r}")
+        return default
+
+# NEW: Changed from BOT_TOKEN to TELEGRAM_BOT_TOKEN
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 if not BOT_TOKEN:
-    raise RuntimeError("BOT_TOKEN is empty. Set it in Railway → Variables")
+    raise RuntimeError("TELEGRAM_BOT_TOKEN is empty. Set it in Railway → Variables")
 
 import logging, logging.handlers
 from telegram import Update
@@ -169,6 +183,9 @@ def create_application():
             MessageHandler(filters.Regex(rf"^{NAV_BACK}$"), handle_back),
             MessageHandler(filters.Regex(rf"^{NAV_CANCEL}$"), handle_cancel),
             CallbackQueryHandler(handle_cancel_choice, pattern=r"^(cancel_step|cancel_all)$"),
+
+            # NEW: Обработчик кнопки "Связаться с оператором" в рамках диалога
+            CallbackQueryHandler(handle_contact_operator, pattern="^contact_operator$"),
 
             # /start в любой момент — аккуратный выход в меню
             CommandHandler("start", reset_to_start),

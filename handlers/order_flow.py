@@ -481,12 +481,12 @@ async def handle_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
         from keyboards import add_contact_row, InlineKeyboardMarkup
         from texts import CONTACTS_TEXT
         
-        # Создаем инлайн-клавиатуру с кнопкой контактов
+        # NEW: Создаем инлайн-клавиатуру с кнопкой контактов
         rows = []
         rows = add_contact_row(rows)
         keyboard = InlineKeyboardMarkup(rows)
         
-        # инфо-карточка → назад в категории
+        # NEW: Отправляем сообщение с кнопкой контактов и завершаем диалог
         await say(update,
             "🖼️ Баннеры сейчас оформляются через оператора.\n"
             "Напишите, пожалуйста, — мы быстро всё уточним и оформим.\n\n"
@@ -494,7 +494,8 @@ async def handle_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup=keyboard,
             state_for_dedupe=OrderStates.CHOOSE_CATEGORY, context=context
         )
-        return await goto(update, context, OrderStates.CHOOSE_CATEGORY, render_choose_category)
+        # NEW: Завершаем ConversationHandler
+        return ConversationHandler.END
     
     # Офисная бумага
     elif text == CAT_OFFICE:

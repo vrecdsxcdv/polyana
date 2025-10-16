@@ -1,10 +1,11 @@
 from telegram import Update
 from telegram.ext import ContextTypes
 from services.orders import get_order_by_code, format_order_for_user
+from loguru import logger
 
 async def cb_view_order(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """
-    Показывает карточку заказа и статус по callback "order_view:<CODE>".
+    NEW: Показывает карточку заказа и статус по callback "order_view:<CODE>".
     Безопасность: показываем ТОЛЬКО если order.user_id == current_user.id
     """
     q = update.callback_query
@@ -17,7 +18,7 @@ async def cb_view_order(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if not code:
             return
 
-        # В проекте сессии получаем через общий фабричный метод, если задан
+        # NEW: Надёжно получаем заказ из БД
         session_factory = context.bot_data.get("db_session_factory")
         session = session_factory() if session_factory else None
         try:
@@ -34,17 +35,22 @@ async def cb_view_order(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 pass
 
         if not order:
-            await q.message.reply_text("⚠️ Заказ не найден.")
+            # NEW: Понятное сообщение об отсутствии заказа
+            await q.message.reply_text("⚠️ Заказ не найден. Возможно, он был удалён или ещё не создан.")
             return
 
         if order.user_id != update.effective_user.id:
             await q.message.reply_text("⚠️ Недостаточно прав для просмотра этого заказа.")
             return
 
+        # NEW: Отображаем карточку заказа
         text = format_order_for_user(order)
         await q.message.reply_text(text)
-    except Exception:
-        await q.message.reply_text("⚠️ Техническая ошибка. Попробуйте ещё раз.")
+        
+    except Exception as e:
+        # NEW: Логируем ошибку и показываем дружелюбное сообщение
+        logger.exception("Error in cb_view_order: %s", e)
+        await q.message.reply_text("⚠️ Произошла ошибка при открытии заказа. Попробуйте позже.")
 
 
 
