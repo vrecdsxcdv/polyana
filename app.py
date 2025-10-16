@@ -214,8 +214,8 @@ def create_application():
     app.add_handler(CommandHandler("all_orders", all_orders))
     app.add_handler(CallbackQueryHandler(on_admin_callback, pattern=r"^(adm_page|adm_open):"))
     app.add_handler(CallbackQueryHandler(handle_status_callback, pattern=r"^(take_order_|start_work_|complete_order_)"))
-    # Глобальный просмотр заказа по коду из любого состояния
-    app.add_handler(CallbackQueryHandler(cb_view_order, pattern=r"^order:view:(\d+)$"))
+    # Глобальный просмотр заказа по коду из любого состояния (универсальный паттерн)
+    app.add_handler(CallbackQueryHandler(cb_view_order, pattern=r"^(view_order_|order:|view:|#)?\d+"))
     # Обработчик контактов оператора
     app.add_handler(CallbackQueryHandler(handle_contact_operator, pattern="^contact_operator$"))
     # Прочие коллбэки админки не регистрируем здесь (тихий список без кнопок)
