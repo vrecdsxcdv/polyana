@@ -5,23 +5,44 @@ try:
 except Exception:
     pass
 
-# NEW: env helpers
 from loguru import logger
 
-def env_int(name: str, default: int | None = None) -> int | None:
-    val = os.getenv(name)
-    if val is None:
-        return default
-    try:
-        return int(val)
-    except ValueError:
-        logger.error(f"ENV {name} must be integer, got: {val!r}")
-        return default
+def get_env():
+    # read with fallbacks
+    token = (
+        os.getenv("TELEGRAM_BOT_TOKEN")
+        or os.getenv("BOT_TOKEN")
+        or os.getenv("TELEGRAM_TOKEN")
+    )
+    operator_chat_id = os.getenv("OPERATOR_CHAT_ID") or os.getenv("ADMIN_CHAT_ID")
+    admin_ids = os.getenv("ADMIN_IDS") or os.getenv("ADMINS")
+    tz = os.getenv("TIMEZONE") or "Europe/Moscow"
 
-# NEW: Changed from BOT_TOKEN to TELEGRAM_BOT_TOKEN
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-if not BOT_TOKEN:
-    raise RuntimeError("TELEGRAM_BOT_TOKEN is empty. Set it in Railway → Variables")
+    # debug log: what we have (without printing secrets)
+    visible_env = sorted([k for k in os.environ.keys() if "TOKEN" not in k and "KEY" not in k])
+    logger.info(f"ENV keys present: {visible_env}")
+    logger.info(f"ENV check: TELEGRAM_BOT_TOKEN={'set' if os.getenv('TELEGRAM_BOT_TOKEN') else 'missing'}; "
+                f"OPERATOR_CHAT_ID={'set' if operator_chat_id else 'missing'}; "
+                f"ADMIN_IDS={'set' if admin_ids else 'missing'}; TIMEZONE={tz}")
+
+    if not token:
+        raise RuntimeError("TELEGRAM_BOT_TOKEN is empty. Set it in Railway → Service → Variables.")
+
+    return token, operator_chat_id, admin_ids, tz
+
+# Get environment variables with fallbacks and logging
+TOKEN, OPERATOR_CHAT_ID, ADMIN_IDS, TIMEZONE = get_env()
+
+# Normalize types for chat IDs and admin IDs
+try:
+    OPERATOR_CHAT_ID = int(OPERATOR_CHAT_ID) if OPERATOR_CHAT_ID else None
+except Exception:
+    logger.warning("OPERATOR_CHAT_ID is not an integer. Using raw value.")
+
+ADMIN_ID_SET = set()
+if ADMIN_IDS:
+    ADMIN_ID_SET = set(int(x.strip()) if x.strip().lstrip("-").isdigit() else x.strip()
+                       for x in ADMIN_IDS.split(",") if x.strip())
 
 import logging, logging.handlers
 from telegram import Update
@@ -53,7 +74,7 @@ def setup_logging():
 
 def create_application():
     defaults=Defaults(parse_mode="HTML")
-    app=ApplicationBuilder().token(config.BOT_TOKEN).defaults(defaults).get_updates_connection_pool_size(4)\
+    app=ApplicationBuilder().token(TOKEN).defaults(defaults).get_updates_connection_pool_size(4)\
         .read_timeout(10).connect_timeout(10).pool_timeout(5).build()
     create_tables(); safe_migrate()
 
@@ -231,7 +252,7 @@ async def build_application():
 
 def main():
     setup_logging()
-    if not config.BOT_TOKEN or ":" not in config.BOT_TOKEN:
+    if not TOKEN or ":" not in TOKEN:
         print("❌ BOT_TOKEN отсутствует или неверный."); return
     app=create_application()
     print("✅ Bot starting (polling)…")
